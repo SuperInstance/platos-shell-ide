@@ -1,0 +1,149 @@
+{
+  "name": "platos-shell-ide",
+  "displayName": "Plato's Shell IDE",
+  "description": "The IDE is the ship. The MUD is the terminal. The ScummVM is the canvas. A2UI is the nervous system that learns.",
+  "version": "0.1.0",
+  "publisher": "SuperInstance",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SuperInstance/platos-shell-ide.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Game Development",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "platos-shell",
+          "title": "Plato's Shell",
+          "icon": "media/plato-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "platos-shell": [
+        {
+          "id": "plato.roomInspector",
+          "name": "Room Inspector"
+        },
+        {
+          "id": "plato.objectTree",
+          "name": "Objects & Agents"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "plato.startMUD",
+        "title": "Plato: Start MUD Terminal",
+        "category": "Plato's Shell"
+      },
+      {
+        "command": "plato.openPreview",
+        "title": "Plato: Open ScummVM Preview",
+        "category": "Plato's Shell"
+      },
+      {
+        "command": "plato.refreshInspector",
+        "title": "Plato: Refresh Room Inspector",
+        "category": "Plato's Shell",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "plato.executeVerb",
+        "title": "Plato: Execute Verb",
+        "category": "Plato's Shell"
+      },
+      {
+        "command": "plato.showA2UIStatus",
+        "title": "Plato: Show A2UI Status",
+        "category": "Plato's Shell"
+      }
+    ],
+    "terminal": {
+      "profiles": [
+        {
+          "id": "plato-mud",
+          "title": "Plato MUD",
+          "icon": "terminal"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "plato.refreshInspector",
+          "when": "view == plato.roomInspector",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "plato.startMUD"
+        },
+        {
+          "command": "plato.openPreview"
+        },
+        {
+          "command": "plato.executeVerb"
+        },
+        {
+          "command": "plato.showA2UIStatus"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Plato's Shell",
+      "properties": {
+        "platosShell.mudCommand": {
+          "type": "string",
+          "default": "node",
+          "description": "Command to launch the MUD process (e.g., 'node /path/to/plato-mud/index.js')"
+        },
+        "platosShell.mudArgs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": [],
+          "description": "Arguments to pass to the MUD command"
+        },
+        "platosShell.previewUrl": {
+          "type": "string",
+          "default": "http://localhost:5173",
+          "description": "URL of the Phaser/ScummVM dev server to show in the preview panel"
+        },
+        "platosShell.worldStoreWsUrl": {
+          "type": "string",
+          "default": "ws://localhost:8787",
+          "description": "WebSocket URL for the SharedWorldStore"
+        },
+        "platosShell.a2uiEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable A2UI learning layer (records user actions for adaptive UI)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  }
+}
