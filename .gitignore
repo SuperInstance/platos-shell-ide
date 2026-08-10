@@ -3,3 +3,6 @@ out/
 *.vsix
 .vscode-test/
 .a2ui/
+node_modules/
+out/
+coverage/
