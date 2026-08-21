@@ -122,16 +122,16 @@ Press **F5** in VS Code to launch an Extension Development Host with the extensi
 The IDE IS the shell — and it connects to the entire fleet:
 
 - **→ [platos-shell](https://github.com/SuperInstance/platos-shell)** — The shell pattern this IDE implements
-- **→ [forgemaster](https://github.com/SuperInstance/forgemaster)** — The grimoire/forge that builds worlds the IDE renders
+- **→ [forgemaster](https://github.com/SuperInstance/forgemaster) (dead)** — The grimoire/forge that builds worlds the IDE renders
 - **→ [mud-engine](https://github.com/SuperInstance/mud-engine)** — The MUD engine the terminal connects to
-- **→ [officers-quarters](https://github.com/SuperInstance/officers-quarters)** — The Phaser game client the preview renders
+- **→ [elephant](https://github.com/SuperInstance/elephant)** — The Phaser game client the preview renders
 - **→ [scummvm-arcade](https://github.com/SuperInstance/scummvm-arcade)** — The game schemas and sync engine
 - **→ [the-tap](https://github.com/SuperInstance/the-tap)** — The agentic bar (TALK TO routes through Tap API)
 - **→ [spatial-registry](https://github.com/SuperInstance/spatial-registry)** — Room topology for the inspector
 - **→ [fleet-connections](https://github.com/SuperInstance/fleet-connections)** — Integration keel wires the SharedWorldStore
-- **→ [fleet-wiki](https://github.com/SuperInstance/fleet-wiki)** — Documentation for the world the IDE serves
+- **→ [lucineer-fleet-wiki](https://github.com/SuperInstance/lucineer-fleet-wiki)** — Documentation for the world the IDE serves
 - **→ [cns-bridge](https://github.com/SuperInstance/cns-bridge)** — CNS signals for agent communication
-- **→ [hermes-perception](https://github.com/SuperInstance/hermes-perception)** — Sensory data feeds
+- **→ [hermes-avatar](https://github.com/SuperInstance/hermes-avatar)** — Sensory data feeds
 - **→ [collective-unconscious](https://github.com/SuperInstance/collective-unconscious)** — Shared memory substrate
 - **→ [fleet-envelope](https://github.com/SuperInstance/fleet-envelope)** — Event grammar
 - **→ [AI-Writings](https://github.com/SuperInstance/AI-Writings)** — The creative corpus behind the world
@@ -149,7 +149,7 @@ See: [mud-engine](https://github.com/SuperInstance/mud-engine) (hermit-crab pack
 
 ## The Mirror Connection
 
-The IDE is also The Mirror — [zeroclaw](https://github.com/SuperInstance/zeroclaw)'s dark twin. Where zeroclaw reflects the agent back at itself, the A2UI logger reflects the *developer* back at themselves. Both are observation systems. Both learn by watching.
+The IDE is also The Mirror — [zeroclaw](https://github.com/SuperInstance/zeroclaw-dissertation)'s dark twin. Where zeroclaw reflects the agent back at itself, the A2UI logger reflects the *developer* back at themselves. Both are observation systems. Both learn by watching.
 
 ---
 
